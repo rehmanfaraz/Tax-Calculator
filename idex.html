@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAX Calculator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <style>
+        .content {
+           text-align: center;
+           background-color: darkgoldenrod;
+           margin-top: 200px;
+           margin-left: 300px;
+           margin-right: 300px;
+           margin-bottom: 300px;
+           padding: 20px;
+           border-radius: 10px;
+        }
+        h1 {
+            text-decoration: underline;
+        }
+        table {
+            margin-top: 30px;
+            font-size: 22px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="content">
+                    <h1 class="mt-5">Calculate Tax on Your Salary</h1>
+                    <table align="center">
+                        <tr>
+                            <td>Your Yearly Salary</td>
+                            <td><input type="number" placeholder="Enter Your Salary" id="Sal1"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <button class="btn btn-success btn-lg mt-3" onclick="calculate()">Calculate Tax</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="result" id="result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       function calculate() {
+    var salary = document.getElementById('Sal1').value;
+    var ans = document.getElementById('result'); 
+    ans.innerHTML = "Your yearly salary is " + salary; 
+}
+
+    </script>
+</body>
+</html>
