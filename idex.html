@@ -44,7 +44,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="text-center">
-                                <button class="btn btn-success btn-lg mt-3" onclick="DisplayTax()">Calculate Tax</button>
+                                <button class="btn btn-success btn-lg mt-3" onclick="calculate()">Calculate Tax</button>
                             </td>
                         </tr>
                     </table>
@@ -58,6 +58,7 @@
     
         function calculate() {
             var salary = document.getElementById('Sal1').value; 
+            ans.innerHTML = "Your yearly salary is " + salary;
             return salary;
         }
 
@@ -66,15 +67,7 @@
             return calculatedTax;
         }
 
-        function DisplayTax() {
-            var bill = calculate(); 
-            if (bill) {
-                var taxAmount = tax(bill); 
-                ans.innerHTML = "Your yearly salary is " + bill + " and your tax is " + taxAmount;
-            } else {
-                ans.innerHTML = "Please enter a valid salary.";
-            }
-        }
+     
     </script>
     
 </body>
